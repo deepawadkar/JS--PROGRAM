@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASS</title>
+</head>
+<body>
+  <center>
+    <h1>prime factorial of numbers.</h1>
+  </center>
+    <script>
+       // Function to find prime factors of a number
+        function primeFactors(n) {
+            var factors = [];
+            for (var i = 2; i <= n; i++) {
+                while (n % i === 0) {
+                    factors.push(i);
+                    n /= i;
+                }
+            }
+            return factors;
+        }
+
+        // Function to calculate the factorial of a number
+        function factorial(num) {
+            if (num === 0 || num === 1) {
+                return 1;
+            } else {
+                return num * factorial(num - 1);
+            }
+        }
+
+        // Example usage
+        var numberToFactorize = 36;
+
+        // Find prime factors
+        var primeFactorsList = primeFactors(numberToFactorize);
+        console.log("Prime factors of " + numberToFactorize + ": " + primeFactorsList.join(", "));
+
+        // Calculate the factorial for each prime factor
+        primeFactorsList.forEach(function(factor) {
+            console.log("Factorial of " + factor + ": " + factorial(factor));
+        });
+
+    </script>
+</body>
+</html>

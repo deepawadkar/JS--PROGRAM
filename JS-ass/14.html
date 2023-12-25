@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass</title>
+</head>
+<body>
+    <center>
+        <h1>Fibonacci Series</h1>
+    </center>
+    <script>
+            function generateFibonacciSeries(n) {
+            var fibonacciSeries = [0, 1];
+
+            for (var i = 2; i < n; i++) {
+                fibonacciSeries[i] = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+            }
+
+            return fibonacciSeries;
+        }
+
+        // Example usage
+        var n = 10; // You can change this to generate a different number of Fibonacci numbers
+
+        var fibonacciSeries = generateFibonacciSeries(n);
+        console.log("Fibonacci Series for n=" + n + ": " + fibonacciSeries.join(", "));
+
+    </script>
+</body>
+</html>

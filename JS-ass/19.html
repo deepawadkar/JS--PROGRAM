@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ASS</title>
+</head>
+<body>
+    <center>
+        <h1>reverse the number.</h1>
+    </center>
+    <script>
+        let number = 12345;
+
+        // Initializing the result variable 
+        let result = 0;
+
+        while(number>0){
+            // Getting the rightmost digit
+            rightmost = number%10;
+            
+            result = result*10 + rightmost;
+            
+            // Removing the rightmost digit from the number
+            number = Math.floor(number/10);
+        }
+        console.log("Reversed number is : " + result)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASS</title>
+</head>
+<body>
+  <center>
+    <h1>exponent of a number using recursion.</h1>
+  </center>
+    <script>
+        function calculateExponent(base, exponent) {
+    // Base case: when the exponent is 0, the result is 1
+          if (exponent === 0) {
+              return 1;
+          } else {
+              // Recursive case: base^exponent = base * base^(exponent-1)
+              return base * calculateExponent(base, exponent - 1);
+          }
+      }
+
+      // Example usage
+      var base = 2;
+      var exponent = 5;
+
+      var result = calculateExponent(base, exponent);
+      console.log(base + " raised to the power of " + exponent + " is: " + result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass</title>
+</head>
+<body>
+  <center>
+    <h1>check whether the triangle is equilateral, scalene, or isosceles?</h1>
+  </center>
+    <script>
+          function checkTriangleType(side1, side2, side3) {
+              if (side1 === side2 && side2 === side3) {
+                  return "Equilateral";
+              } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+                  return "Isosceles";
+              } else {
+                  return "Scalene";
+              }
+          }
+
+          // Example usage
+          var sideA = 5;
+          var sideB = 5;
+          var sideC = 5;
+
+          console.log("Triangle with sides " + sideA + ", " + sideB + ", " + sideC + " is " + checkTriangleType(sideA, sideB, sideC));
+
+    </script>
+
+<!-- 1) If all three sides are equal, it's an equilateral triangle.
+      2) If at least two sides are equal, it's an isosceles triangle.
+      3) If all sides are different, it's a scalene triangle. -->
+</body>
+</html>

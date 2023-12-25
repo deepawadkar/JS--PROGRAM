@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass</title>
+</head>
+<body>
+	<center>
+		<h1>Find the given number is Palindrome or not.</h1>
+	</center>
+    <script>
+        function isPalindrome(number) {
+			const numStr = number.toString();
+			const reversedStr = numStr.split('').reverse().join('');
+			return numStr === reversedStr;
+		}
+
+		// Example usage
+		const numberToCheck = 22122;
+		if (isPalindrome(numberToCheck)) {
+			document.write(numberToCheck + " is a palindrome.");
+		} else {
+			document.write(numberToCheck + " is not a palindrome.");
+		}
+
+    </script>
+</body>
+</html>

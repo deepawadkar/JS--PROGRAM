@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASS</title>
+</head>
+<body>
+    <center>
+        <h1> internet number in range x and y.</h1>
+    </center>
+    <script>
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Example usage
+        var x = 10;  // replace with your desired lower limit
+        var y = 50;  // replace with your desired upper limit
+
+        var random_number = getRandomIntInclusive(x, y);
+        console.log(random_number);
+    </script>
+</body>
+</html>

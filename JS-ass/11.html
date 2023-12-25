@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASS</title>
+</head>
+<body>
+    <center>
+        <h1>Program to check Armstrong number</h1>
+    </center>
+    <script>
+        function isArmstrongNumber(number) {
+            // Convert the number to a string to find the number of digits
+            var numStr = number.toString();
+            var numDigits = numStr.length;
+
+            // Calculate the sum of each digit raised to the power of the number of digits
+            var sum = 0;
+            for (var i = 0; i < numDigits; i++) {
+                sum += Math.pow(parseInt(numStr[i]), numDigits);
+            }
+
+            // Check if the sum is equal to the original number
+            return sum === number;
+        }
+
+        // Example usage
+        var armstrongNumber = 1634;
+
+        if (isArmstrongNumber(armstrongNumber)) {
+            console.log(armstrongNumber + " is an Armstrong number.");
+        } else {
+            console.log(armstrongNumber + " is not an Armstrong number.");
+        }
+    </script>
+</body>
+</html>

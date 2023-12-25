@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASs</title>
+</head>
+<body>
+    <center>
+        <h1>triangle is valid or not (sum of all angles=180).</h1>
+    </center>
+    <script>
+            function isTriangle(angle1, angle2, angle3) {
+            // Check if the sum of angles is equal to 180
+            return angle1 + angle2 + angle3 === 180;
+        }
+
+        // Example usage
+        var angle1 = 60;
+        var angle2 = 60;
+        var angle3 = 60;
+
+        if (isTriangle(angle1, angle2, angle3)) {
+            console.log("The angles " + angle1 + ", " + angle2 + ", " + angle3 + " form a valid triangle.");
+        } else {
+            console.log("The angles " + angle1 + ", " + angle2 + ", " + angle3 + " do not form a valid triangle.");
+        }
+
+    </script>
+</body>
+</html>

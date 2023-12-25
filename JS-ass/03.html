@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass</title>
+</head>
+<body>
+	<center>
+		<h1>Program to find out whether a given year is leap or not ? </h1>
+	</center>
+    <script>
+        function isLeapYear(year) {
+			if (
+				year % 100 === 0 ? year % 400 === 0 : year % 4 === 0
+			)
+				document.write(" Input year :  ", year  ,  "is a Leap Year <br><br>"); 
+			else
+				document.write(
+					" Input year  : ", year, "is NOT a Leap Year"
+				);
+		}
+
+		let inputYear = 2020;
+		isLeapYear(inputYear);
+		inputYear = 2023;
+		isLeapYear(inputYear);
+
+    </script>
+</body>
+</html>

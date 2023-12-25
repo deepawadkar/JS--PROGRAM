@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass</title>
+</head>
+<body>
+<center>
+    <h1>Patterns- pyramids (Half, inverted half, hollow half, full, hollow full, hollow inverted half)</h1>
+</center>
+
+<!-- half pyramid -->
+
+    <script>
+          function drawHalfPyramid(rows) {
+            for (var i = 1; i <= rows; i++) {
+                var row = '';
+                for (var j = 1; j <= i; j++) {
+                    row += '* ';
+                }
+                console.log(row);
+            }
+        }
+
+        // Example usage
+        var pyramidRows = 5;
+        drawHalfPyramid(pyramidRows);
+    </script>
+
+<br>
+
+<!-- full pyramid -->
+
+<script>
+    function drawFullPyramid(rows) {
+        for (var i = 1; i <= rows; i++) {
+            var row = ' '.repeat(rows - i);
+            row += '*'.repeat(2 * i - 1);
+            console.log(row);
+        }
+    }
+
+    // Example usage
+    var pyramidRows = 5;
+    drawFullPyramid(pyramidRows);
+
+</script>
+
+<br>
+
+<!--  inverted half pyramid -->
+    <script>
+        function drawInvertedHalfPyramid(rows) {
+    for (var i = rows; i >= 1; i--) {
+        var row = '';
+        for (var j = 1; j <= i; j++) {
+            row += '* ';
+        }
+        console.log(row);
+    }
+}
+var pyramidRows = 5;
+drawInvertedHalfPyramid(pyramidRows);
+    </script>
+    
+<br>
+
+
+<!-- <!-hollow half pyramid --> 
+
+<script>
+    function drawHollowHalfPyramid(rows) {
+    for (var i = 1; i <= rows; i++) {
+        var row = '';
+        for (var j = 1; j <= i; j++) {
+            if (j === 1 || j === i || i === rows) {
+                row += '* ';
+            } else {
+                row += '  ';
+            }
+        }
+        console.log(row);
+    }
+}
+var pyramidRows = 5;
+drawHollowHalfPyramid(pyramidRows);
+</script>
+
+<br>
+
+<!-- HollowFullPyramid -->
+
+<script>
+    function drawHollowFullPyramid(rows) {
+    for (var i = 1; i <= rows; i++) {
+        var row = ' '.repeat(rows - i);
+        row += '*';
+
+        if (i > 1 && i < rows) {
+            row += ' '.repeat(2 * i - 3);
+            row += '*';
+        }
+
+        console.log(row);
+    }
+}
+var pyramidRows = 5;
+drawHollowFullPyramid(pyramidRows);
+</script>
+
+<br>
+<!-- HollowInvertedHalfPyramid -->
+
+<script>
+    function drawHollowInvertedHalfPyramid(rows) {
+    for (var i = rows; i >= 1; i--) {
+        var row = '';
+
+        for (var j = i; j <= rows; j++) {
+            if (j === i || j === rows) {
+                row += '* ';
+            } else {
+                row += '  ';
+            }
+        }
+
+        console.log(row);
+    }
+}
+var pyramidRows = 5;
+drawHollowInvertedHalfPyramid(pyramidRows);
+
+</script>
+
+</body>
+</html>

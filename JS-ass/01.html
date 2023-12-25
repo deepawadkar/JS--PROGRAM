@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ASS</title>
+</head>
+<body>
+    <center>
+        <h1>Largest of two numbers using JS</h1>
+    </center>
+  <script>
+      function findLargestNumber(num1, num2) {
+            if (num1 > num2) {
+                return num1;
+            } else {
+                return num2;
+            }
+        }
+
+        // Example usage
+        var x = 5;
+        var y = 10;
+
+        var largestNumber = findLargestNumber(x, y);
+        document.write("The largest number is : "+largestNumber);
+      </script>
+</body>
+</html>
